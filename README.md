@@ -74,6 +74,9 @@ Shows:
 - Location and social context analysis
 - 3 personalized, actionable recommendations
 
+### `/flow-state:flow-uninstall`
+Remove all scheduled reminders installed by `flow-setup`. Will ask whether to keep or delete your log data.
+
 ## Data Storage
 
 All logs are stored locally in `~/.flow-data/logs.json`. Nothing is sent externally.
@@ -95,7 +98,7 @@ All logs are stored locally in `~/.flow-data/logs.json`. Nothing is sent externa
 
 To stop reminders at any time:
 ```bash
-crontab -l | grep -v remind.sh | crontab -
+/flow-state:flow-uninstall
 ```
 
 ## The Science Behind It

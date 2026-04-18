@@ -72,6 +72,9 @@ macOS Catalina 及更新版本中，cron 需要「完全磁盘访问权限」才
 - 地点与陪伴者的影响分析
 - 3 条个性化可操作建议
 
+### `/flow-state:flow-uninstall`
+移除 `flow-setup` 安装的所有定时提醒，并询问是否保留历史记录数据。
+
 ## 数据存储
 
 所有记录保存在本地的 `~/.flow-data/logs.json` 文件中，不会上传或发送到任何外部服务。
@@ -93,7 +96,7 @@ macOS Catalina 及更新版本中，cron 需要「完全磁盘访问权限」才
 
 随时可以停止提醒：
 ```bash
-crontab -l | grep -v remind.sh | crontab -
+/flow-state:flow-uninstall
 ```
 
 ## 背后的科学原理
