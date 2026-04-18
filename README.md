@@ -40,7 +40,7 @@ Whether you're figuring out your next career move, pushing through an important 
 
 ## What It Does
 
-Set 40 reminders per week (5–6 per day). After running `/flow-state:flow-setup` once, your Mac will **automatically pop up a dialog at each scheduled time** — no need to open Claude Code. Fill it in, close it, done in 30 seconds. After 1–2 weeks, run `/flow-state:flow-review` to discover:
+Set 40 reminders per week (5–6 per day). After running `/flow-state:flow-setup` once, your Mac will **automatically pop up a dialog at each scheduled time** — no need to open Claude Code. Fill it in, close it, done in 30 seconds. When you're away from your computer, jot a quick note on your phone and import it later with `/flow-state:flow-import`. After 1–2 weeks, run `/flow-state:flow-review` to discover:
 
 1. **Which activities trigger your flow** — what you're doing, where, and with whom
 2. **Your peak hours** — when in the day you're most likely to enter flow
@@ -111,6 +111,9 @@ Shows:
 - Time-of-day heatmap
 - Location and social context analysis
 - 3 personalized, actionable recommendations
+
+### `/flow-state:flow-import`
+Paste notes you captured on your phone — one sentence is enough, no format required. Claude parses what it can and gives one specific tip after each import to help you write a little more next time. The goal is to build the habit gradually, not to get it perfect from day one.
 
 ### `/flow-state:flow-uninstall`
 Remove all scheduled reminders installed by `flow-setup`. Will ask whether to keep or delete your log data.
