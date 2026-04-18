@@ -2,7 +2,41 @@
 
 [中文版](README.zh.md)
 
-A Claude Code plugin for discovering your personal flow state patterns using the **Experience Sampling Method (ESM)** — developed by psychologist Mihaly Csikszentmihalyi.
+> This tool started as my own problem. And after nearly three years of career coaching, I've heard the same question more times than I can count: **"How do I find my flow?"**
+
+---
+
+## Why I Built This
+
+I've been a career coach for almost three years. Most of my clients fall into two groups.
+
+The first group are professionals at a crossroads — should I quit? Should I change careers? Should I start my own business? Underneath every one of those questions is usually the same thing: they rarely feel genuinely engaged in what they're doing.
+
+The second group are young people, roughly 15 to 20 years old. They feel out of place in traditional education, but the AI era has given them a new outlet — they're turning their ideas into real things, even starting to think about building businesses. Their biggest question is: **What do I actually want to do? What am I capable of? What would let me create real value — and make a living doing it?**
+
+There's a third group too, a smaller one: people who've just started their own ventures. Suddenly they have all the time in the world, but can't seem to focus. Can't get started on the things that actually matter.
+
+**That last one describes me.**
+
+When I was still working a regular job, I noticed I could only ever get into a real flow state late at night. Creative thinking, deep work — I couldn't do any of it during the day. Meetings, messages, constant interruptions. I'd stay up late to finish the things that mattered, sleep poorly, wake up drained, and repeat. A slow, exhausting cycle.
+
+Last year I left that job and started my own business. I thought having freedom over my time would fix everything. It didn't.
+
+Working alone at home or in an office, the distractions were somehow worse — my phone, my computer, messages from everywhere. I tried forcing myself into a fixed "work schedule," like I was still employed. I sat there looking productive. But I wasn't really present. The projects barely moved.
+
+In coaching, I've noticed people get stuck in three specific places:
+
+1. **They don't really understand what flow is, or why it matters** — they've heard the word, but it stays abstract
+2. **They don't know how to find their own flow** — because flow is personal. What works for someone else won't necessarily work for you
+3. **Even when they know the method, they can't stick with it** — this is the most common failure point, because most approaches are too vague to actually use
+
+This tool is built around those three problems.
+
+**It won't tell you what flow is. It will help you find yours — from your own real life, in your own words.**
+
+Whether you're figuring out your next career move, pushing through an important project, or trying to find your rhythm as a new founder — the things worth doing require you to be genuinely present to do them well.
+
+---
 
 ## What It Does
 
@@ -11,6 +45,10 @@ Set 40 reminders per week (5–6 per day). After running `/flow-state:flow-setup
 1. **Which activities trigger your flow** — what you're doing, where, and with whom
 2. **Your peak hours** — when in the day you're most likely to enter flow
 3. **How to redesign your schedule** — actionable suggestions based on your actual data
+
+**This works for everyone. Run it again every 3–6 months** — as your life changes, so does where your flow comes from.
+
+---
 
 ## Installation
 
