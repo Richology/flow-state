@@ -30,7 +30,7 @@ claude plugin install https://github.com/Richology/flow-state
 - 心流状态（是 / 部分 / 否）
 - 可选备注
 
-数据保存在当前目录的 `.flow-data/logs.json` 文件中。
+数据保存在当前目录的 `~/.flow-data/logs.json` 文件中。
 
 ### `/flow-state:flow-review`
 分析你积累的数据。建议至少收集 20 条记录后使用（40 条以上效果更佳）。
@@ -48,7 +48,7 @@ claude plugin install https://github.com/Richology/flow-state
 
 ## 数据存储
 
-所有记录保存在本地的 `.flow-data/logs.json` 文件中，不会上传或发送到任何外部服务。
+所有记录保存在本地的 `~/.flow-data/logs.json` 文件中，不会上传或发送到任何外部服务。
 
 ```json
 [

@@ -8,7 +8,7 @@ argument-hint: [week|all]
 
 # 心流规律分析
 
-读取 `.flow-data/logs.json` 中的所有记录，进行深度分析。
+读取 `~/.flow-data/logs.json` 中的所有记录，进行深度分析。
 
 如果文件不存在或记录少于 10 条，提示用户先用 `/flow-state:flow-log` 积累更多数据。
 

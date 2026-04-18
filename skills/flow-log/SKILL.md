@@ -43,7 +43,7 @@ argument-hint: [optional note]
 
 ## 保存记录
 
-收集完所有回答后，将记录追加保存到 `.flow-data/logs.json` 文件中。
+收集完所有回答后，将记录追加保存到 `~/.flow-data/logs.json` 文件中。
 
 **数据格式如下：**
 ```json
@@ -59,7 +59,7 @@ argument-hint: [optional note]
 }
 ```
 
-如果 `.flow-data/logs.json` 不存在，先创建文件（内容为空数组 `[]`），再追加新记录。
+如果 `~/.flow-data/logs.json` 不存在，先创建文件（内容为空数组 `[]`），再追加新记录。
 
 保存成功后，显示一条简短的确认消息，例如：
 ```

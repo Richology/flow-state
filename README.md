@@ -32,7 +32,7 @@ Run every time a reminder goes off. Takes ~30 seconds. Records:
 - Flow state (yes / partial / no)
 - Optional notes
 
-Data is saved to `.flow-data/logs.json` in your current directory.
+Data is saved to `~/.flow-data/logs.json`.
 
 ### `/flow-state:flow-review`
 Analyze your accumulated data. Run after collecting 20+ entries (40+ recommended).
@@ -50,7 +50,7 @@ Shows:
 
 ## Data Storage
 
-All logs are stored locally in `.flow-data/logs.json` in whatever directory you run the skill from. Nothing is sent externally.
+All logs are stored locally in `~/.flow-data/logs.json`. Nothing is sent externally.
 
 ```json
 [
