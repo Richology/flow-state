@@ -79,6 +79,33 @@ On macOS Catalina and later, cron requires Full Disk Access permission to run sc
 
 Do this **before** your first scheduled reminder, otherwise nothing will pop up.
 
+## Two Ways to Log
+
+This tool is designed around a simple truth: **you're not always at your computer.**
+
+Flow can happen anywhere — in a conversation at a café, on a run, while cooking, while doing nothing in particular. If you only capture your state when you're at your desk, you'll miss some of the most important data points, and the analysis will have blind spots.
+
+So there are two paths:
+
+**On your computer (automatic)**
+Cron fires at scheduled times, a dialog pops up, you fill it in and close it in 30 seconds.
+
+**On your phone (freeform notes)**
+When you're away from your computer, jot a quick note anywhere — Notes app, WeChat, wherever. Something like:
+- "afternoon at café writing, really in the zone"
+- "3pm meeting at office, so bored"
+- "just finished a run, alone, head feels clear, haven't felt like this in a while"
+
+When you're back at your computer, paste those notes into `/flow-state:flow-import`. Claude parses them into structured data and saves them alongside your other records.
+
+**Building the habit gradually**
+
+You don't need to write a lot at first. Even a single sentence about what you were doing and how it felt is enough to start. After each import, the tool gives you one specific tip for next time — just one thing, not a checklist. Over time, your notes naturally get more complete without it feeling like work.
+
+Consistency matters more than completeness.
+
+---
+
 ## Skills
 
 ### `/flow-state:flow-setup`
@@ -113,7 +140,14 @@ Shows:
 - 3 personalized, actionable recommendations
 
 ### `/flow-state:flow-import`
-Paste notes you captured on your phone — one sentence is enough, no format required. Claude parses what it can and gives one specific tip after each import to help you write a little more next time. The goal is to build the habit gradually, not to get it perfect from day one.
+Paste freeform notes from your phone — one sentence, multiple entries at once, any format. Nothing will be rejected for being incomplete.
+
+Claude extracts what it can: time, activity, location, company, focus level, mood, and flow state. Missing fields are left blank. It shows you the parsed result and only asks about the things it's genuinely unsure about.
+
+After each import, you get one specific tip for next time, for example:
+> "Next time, add roughly what time it was — like 'around 3pm at the café writing' — and I can start mapping which hours are your best."
+
+One tip per session. That's it. The habit builds on its own.
 
 ### `/flow-state:flow-uninstall`
 Remove all scheduled reminders installed by `flow-setup`. Will ask whether to keep or delete your log data.
