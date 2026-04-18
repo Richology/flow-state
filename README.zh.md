@@ -13,7 +13,8 @@
 ## 安装
 
 ```bash
-claude plugin install https://github.com/Richology/flow-state
+/plugin marketplace add Richology/flow-state
+/plugin install flow-state@richology-flow-state
 ```
 
 ## 工作原理

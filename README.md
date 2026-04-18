@@ -15,7 +15,8 @@ Set 40 reminders per week (5–6 per day). After running `/flow-state:flow-setup
 ## Installation
 
 ```bash
-claude plugin install https://github.com/Richology/flow-state
+/plugin marketplace add Richology/flow-state
+/plugin install flow-state@richology-flow-state
 ```
 
 ## How It Works

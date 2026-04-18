@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "name": "flow-state",
+      "description": "Discover your personal flow state patterns using the Experience Sampling Method. Auto-installs macOS reminders via cron — no app needed at reminder time.",
+      "path": "."
+    }
+  ]
+}
