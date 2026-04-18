@@ -26,7 +26,19 @@ claude plugin install https://github.com/Richology/flow-state
 cron → remind.sh → AppleScript dialog → ~/.flow-data/logs.json
 ```
 
-> **macOS permission note:** If the popup doesn't appear, go to System Settings → Privacy & Security → Full Disk Access and add `/usr/sbin/cron`.
+## ⚠️ Required: macOS Permission Setup
+
+**This step is mandatory — skip it and reminders will silently not appear.**
+
+On macOS Catalina and later, cron requires Full Disk Access permission to run scripts that show dialogs.
+
+**How to grant it:**
+1. Open **System Settings → Privacy & Security → Full Disk Access**
+2. Click the `+` button
+3. Press `Cmd+Shift+G`, type `/usr/sbin/cron`, press Enter
+4. Select `cron` and click Open
+
+Do this **before** your first scheduled reminder, otherwise nothing will pop up.
 
 ## Skills
 

@@ -24,7 +24,19 @@ claude plugin install https://github.com/Richology/flow-state
 cron → remind.sh → AppleScript 对话框 → ~/.flow-data/logs.json
 ```
 
-> **macOS 权限提示：** 如果弹框没有出现，请前往「系统设置 → 隐私与安全性 → 完全磁盘访问权限」，将 `/usr/sbin/cron` 添加进去。
+## ⚠️ 必做：macOS 权限设置
+
+**这一步必须完成，否则提醒会静默失败，不弹任何窗口。**
+
+macOS Catalina 及更新版本中，cron 需要「完全磁盘访问权限」才能运行弹窗脚本。
+
+**授权步骤：**
+1. 打开「**系统设置 → 隐私与安全性 → 完全磁盘访问权限**」
+2. 点击左下角 `+` 按钮
+3. 按 `Cmd+Shift+G`，输入 `/usr/sbin/cron`，回车
+4. 选中 `cron`，点击「打开」
+
+请在**第一个提醒触发之前**完成此操作，否则弹框不会出现。
 
 ## 三个 Skill
 
