@@ -53,6 +53,8 @@
 /plugin install flow-state@richology-flow-state
 ```
 
+**没有 Claude Code？** 这套工具同样适用于 ChatGPT、Claude 网页版、Gemini 或任何 AI 工具。查看 [`prompts/`](prompts/) 文件夹，里面有可以直接复制使用的独立提示词，不需要安装任何东西。
+
 ## 工作原理
 
 `flow-setup` 会在系统 cron 里安装定时任务，到点自动运行 `remind.sh`，通过 macOS 的 AppleScript 弹出原生对话框 —— **提醒时无需任何 App、浏览器或 Claude Code**。

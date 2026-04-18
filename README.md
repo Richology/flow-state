@@ -57,6 +57,8 @@ Set 40 reminders per week (5–6 per day). After running `/flow-state:flow-setup
 /plugin install flow-state@richology-flow-state
 ```
 
+**Don't use Claude Code?** This tool works with any AI — ChatGPT, Claude web, Gemini, or anything else. See the [`prompts/`](prompts/) folder for standalone prompt files you can copy and paste directly, no installation needed.
+
 ## How It Works
 
 `flow-setup` installs a cron job that fires `remind.sh` at your chosen times. The script uses macOS AppleScript to show a native dialog — **no app, no browser, no Claude Code needed** at reminder time.
