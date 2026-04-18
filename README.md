@@ -90,7 +90,12 @@ Flow can happen anywhere — in a conversation at a café, on a run, while cooki
 So there are two paths:
 
 **On your computer (automatic)**
-Cron fires at scheduled times, a dialog pops up, you fill it in and close it in 30 seconds.
+Cron fires at scheduled times, a dialog pops up — **3 steps, about 15 seconds**:
+1. "What are you doing, where / who with" — one line
+2. Three buttons for flow state: No / Partial / Yes
+3. "8 7" — two numbers for focus and mood
+
+Done. Back to what you were doing.
 
 **On your phone (freeform notes)**
 When you're away from your computer, jot a quick note anywhere — Notes app, WeChat, wherever. Something like:
@@ -128,7 +133,7 @@ Manual logging via Claude Code — useful when you want to log outside of schedu
 Data is saved to `~/.flow-data/logs.json`.
 
 ### `/flow-state:flow-review`
-Analyze your accumulated data. Run after collecting 20+ entries (40+ recommended).
+Analyze your accumulated data. **Works from just 3 entries**, best with 40+.
 
 ```bash
 /flow-state:flow-review        # analyze all data
@@ -140,6 +145,12 @@ Shows:
 - Time-of-day heatmap
 - Location and social context analysis
 - 3 personalized, actionable recommendations
+
+**Three things that make this different:**
+
+- **Cold start mode**: Never says "not enough data." With just a few entries it finds your strongest flow moment so far and asks what made it special — you get something useful from day one
+- **Snapshot comparison**: Every analysis is saved. Next time you run it, you see what changed — flow rate trends, peak hour shifts, which activities moved up or down
+- **Reflection prompt**: At the end, one question: "Anything here surprise you?" Your answer is saved alongside the data. Over time you can watch how your self-awareness grows alongside your habits
 
 ### `/flow-state:flow-import`
 Paste freeform notes from your phone — one sentence, multiple entries at once, any format. Nothing will be rejected for being incomplete.
