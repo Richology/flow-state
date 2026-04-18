@@ -1,5 +1,7 @@
 # flow-state
 
+[中文版](README.zh.md)
+
 A Claude Code plugin for discovering your personal flow state patterns using the **Experience Sampling Method (ESM)** — developed by psychologist Mihaly Csikszentmihalyi.
 
 ## What It Does
