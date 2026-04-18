@@ -1,0 +1,10 @@
+{
+  "name": "flow-state",
+  "description": "Track your flow states using the Experience Sampling Method. Log your current state when reminders go off, then analyze patterns to discover when and how you enter flow.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Richology"
+  },
+  "homepage": "https://github.com/Richology/flow-state",
+  "repository": "https://github.com/Richology/flow-state"
+}
