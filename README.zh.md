@@ -57,25 +57,39 @@
 
 ## 工作原理
 
-`flow-setup` 会在系统 cron 里安装定时任务，到点自动运行 `remind.sh`，通过 macOS 的 AppleScript 弹出原生对话框 —— **提醒时无需任何 App、浏览器或 Claude Code**。
+`flow-setup` 会检测你的操作系统，自动选择对应方案：
+
+- **macOS**：在系统 cron 里安装定时任务，到点运行 `remind.sh`，通过 AppleScript 弹出原生对话框
+- **Windows**：在任务计划程序（Task Scheduler）里安装定时任务，到点运行 `remind.ps1`，通过 PowerShell Windows Forms 弹出对话框
+
+两个平台的弹窗体验完全一致，数据格式也相同。
 
 ```
-cron → remind.sh → AppleScript 对话框 → ~/.flow-data/logs.json
+cron / Task Scheduler → remind.sh / remind.ps1 → 对话框 → ~/.flow-data/logs.json
 ```
 
-## ⚠️ 必做：macOS 权限设置
+## ⚠️ 必做：系统权限设置
+
+### macOS
 
 **这一步必须完成，否则提醒会静默失败，不弹任何窗口。**
 
 macOS Catalina 及更新版本中，cron 需要「完全磁盘访问权限」才能运行弹窗脚本。
 
-**授权步骤：**
 1. 打开「**系统设置 → 隐私与安全性 → 完全磁盘访问权限**」
 2. 点击左下角 `+` 按钮
 3. 按 `Cmd+Shift+G`，输入 `/usr/sbin/cron`，回车
 4. 选中 `cron`，点击「打开」
 
-请在**第一个提醒触发之前**完成此操作，否则弹框不会出现。
+### Windows
+
+**PowerShell 默认执行策略会阻止脚本运行，必须提前设置。**
+
+以管理员身份运行 PowerShell，执行：
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
 
 ## 两条记录路径
 
@@ -193,8 +207,8 @@ Csikszentmihalyi 的研究发现，人们对「什么让自己快乐或专注」
 
 ## 环境要求
 
-- macOS（弹窗依赖 AppleScript）
-- Python 3（macOS 已预装）
+- macOS 或 **Windows**（弹窗分别依赖 AppleScript 和 PowerShell Windows Forms）
+- Python 3（macOS 已预装；Windows 请从 [python.org](https://python.org) 安装）
 - Claude Code（仅 setup 和 review 时需要）
 
 ## 开始使用

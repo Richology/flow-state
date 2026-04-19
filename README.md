@@ -61,25 +61,39 @@ Set 40 reminders per week (5–6 per day). After running `/flow-state:flow-setup
 
 ## How It Works
 
-`flow-setup` installs a cron job that fires `remind.sh` at your chosen times. The script uses macOS AppleScript to show a native dialog — **no app, no browser, no Claude Code needed** at reminder time.
+`flow-setup` detects your operating system and installs the right solution automatically:
+
+- **macOS**: Installs a cron job that runs `remind.sh`, using AppleScript to show a native dialog
+- **Windows**: Installs a Task Scheduler job that runs `remind.ps1`, using PowerShell Windows Forms to show a dialog
+
+Both platforms deliver the same 3-step experience. Data format is identical.
 
 ```
-cron → remind.sh → AppleScript dialog → ~/.flow-data/logs.json
+cron / Task Scheduler → remind.sh / remind.ps1 → dialog → ~/.flow-data/logs.json
 ```
 
-## ⚠️ Required: macOS Permission Setup
+## ⚠️ Required: Permission Setup
+
+### macOS
 
 **This step is mandatory — skip it and reminders will silently not appear.**
 
-On macOS Catalina and later, cron requires Full Disk Access permission to run scripts that show dialogs.
+On macOS Catalina and later, cron requires Full Disk Access to show dialogs.
 
-**How to grant it:**
 1. Open **System Settings → Privacy & Security → Full Disk Access**
-2. Click the `+` button
+2. Click `+`
 3. Press `Cmd+Shift+G`, type `/usr/sbin/cron`, press Enter
 4. Select `cron` and click Open
 
-Do this **before** your first scheduled reminder, otherwise nothing will pop up.
+### Windows
+
+**PowerShell's default execution policy blocks scripts — set this before your first reminder.**
+
+Open PowerShell as Administrator and run:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
 
 ## Two Ways to Log
 
@@ -197,8 +211,8 @@ Csikszentmihalyi found that people are notoriously bad at predicting what makes 
 
 ## Requirements
 
-- macOS (AppleScript-based popups)
-- Python 3 (pre-installed on macOS)
+- macOS or **Windows**
+- Python 3 (pre-installed on macOS; download from [python.org](https://python.org) on Windows)
 - Claude Code (for setup and review only)
 
 ## License
