@@ -40,7 +40,7 @@ Whether you're figuring out your next career move, pushing through an important 
 
 ## What It Does
 
-Set 40 reminders per week (5–6 per day). After running `/flow-state:flow-setup` once, your Mac will **automatically pop up a dialog at each scheduled time** — no need to open Claude Code. Fill it in, close it, done in 30 seconds. When you're away from your computer, jot a quick note on your phone and import it later with `/flow-state:flow-import`. After 1–2 weeks, run `/flow-state:flow-review` to discover:
+Set 40 reminders per week (5–6 per day). After running `/flow-state:flow-setup` once, your computer will **automatically pop up a dialog at each scheduled time** — no need to open Claude Code. Fill it in, 3 steps, done in about 15 seconds. When you're away from your computer, jot a quick note on your phone and import it later with `/flow-state:flow-import`. After 1–2 weeks, run `/flow-state:flow-review` to discover:
 
 1. **Which activities trigger your flow** — what you're doing, where, and with whom
 2. **Your peak hours** — when in the day you're most likely to enter flow
@@ -130,10 +130,10 @@ Consistency matters more than completeness.
 ## Skills
 
 ### `/flow-state:flow-setup`
-Run this first. Tell it your wake/sleep time and it will:
+Run this first. Auto-detects macOS or Windows. Tell it your wake/sleep time and it will:
 - Calculate 6 evenly distributed reminder times
-- Copy `remind.sh` to `~/.flow-data/`
-- Install cron jobs automatically
+- Copy the reminder script to `~/.flow-data/` (macOS: `remind.sh`, Windows: `remind.ps1`)
+- Install scheduled tasks (macOS: cron, Windows: Task Scheduler)
 
 ### `/flow-state:flow-log`
 Manual logging via Claude Code — useful when you want to log outside of scheduled reminders. Takes ~30 seconds. Records:
@@ -177,7 +177,7 @@ After each import, you get one specific tip for next time, for example:
 One tip per session. That's it. The habit builds on its own.
 
 ### `/flow-state:flow-uninstall`
-Remove all scheduled reminders installed by `flow-setup`. Will ask whether to keep or delete your log data.
+Remove all scheduled reminders installed by `flow-setup` (auto-detects macOS/Windows). Will ask whether to keep or delete your log data.
 
 ## Data Storage
 
