@@ -48,9 +48,22 @@
 
 ## 安装
 
+在终端运行以下命令，一次性安装全部 5 个 skill：
+
 ```bash
-/plugin marketplace add Richology/flow-state
-/plugin install flow-state@richology-flow-state
+for skill in flow-setup flow-log flow-review flow-import flow-uninstall; do
+  mkdir -p ~/.claude/skills/$skill
+  curl -sL "https://raw.githubusercontent.com/Richology/flow-state/main/skills/$skill/SKILL.md" -o ~/.claude/skills/$skill/SKILL.md
+done
+```
+
+安装后重启 Claude Code，输入 `/` 即可看到所有 skill，直接调用。
+
+**想只安装某一个？** 单独运行对应命令，例如只装 `flow-review`：
+
+```bash
+mkdir -p ~/.claude/skills/flow-review
+curl -sL "https://raw.githubusercontent.com/Richology/flow-state/main/skills/flow-review/SKILL.md" -o ~/.claude/skills/flow-review/SKILL.md
 ```
 
 **没有 Claude Code？** 这套工具同样适用于 ChatGPT、Claude 网页版、Gemini 或任何 AI 工具。查看 [`prompts/`](prompts/) 文件夹，里面有可以直接复制使用的独立提示词，不需要安装任何东西。

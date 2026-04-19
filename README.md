@@ -52,9 +52,22 @@ Set 40 reminders per week (5–6 per day). After running `/flow-state:flow-setup
 
 ## Installation
 
+Run this in your terminal to install all 5 skills at once:
+
 ```bash
-/plugin marketplace add Richology/flow-state
-/plugin install flow-state@richology-flow-state
+for skill in flow-setup flow-log flow-review flow-import flow-uninstall; do
+  mkdir -p ~/.claude/skills/$skill
+  curl -sL "https://raw.githubusercontent.com/Richology/flow-state/main/skills/$skill/SKILL.md" -o ~/.claude/skills/$skill/SKILL.md
+done
+```
+
+After installing, restart Claude Code. Type `/` to see all skills in the list.
+
+**Want just one skill?** Run the command for that skill only, e.g. for `flow-review`:
+
+```bash
+mkdir -p ~/.claude/skills/flow-review
+curl -sL "https://raw.githubusercontent.com/Richology/flow-state/main/skills/flow-review/SKILL.md" -o ~/.claude/skills/flow-review/SKILL.md
 ```
 
 **Don't use Claude Code?** This tool works with any AI — ChatGPT, Claude web, Gemini, or anything else. See the [`prompts/`](prompts/) folder for standalone prompt files you can copy and paste directly, no installation needed.
